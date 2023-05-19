@@ -5,8 +5,6 @@ import ChatCard from '../components/ChatCard';
 import PulsatingCard from '../components/PulsatingCard';
 import askChatGpt from '../api/chatGpt';
 
-import '../styles/globals.css';
-
 export default function App() {
   const [formInput, setFormInput] = useState('');
   const [inputResponse, setInputResponse] = useState([]);
@@ -61,7 +59,7 @@ export default function App() {
         ) : null
       }
       {
-        inputResponse.map((item) => <ChatCard key={item.id} input={item.input} response={item.response} />)
+        inputResponse.map((item) => <ChatCard key={item.id} input={item.input} response={item.response} primary />)
       }
     </div>
   );
